@@ -1,0 +1,53 @@
+<%= link_to 'Back', product1s_path, class: "btn btn-default" %>
+<div class = "container-fluid">
+	<div class = "row">
+		<div class = "col-xs-6 col-md-6">
+			<%= image_tag @product1.image.url(:large) %>
+  				<div class = "post_show_title">
+			  	  <p><%= @product1.title %></p>
+		        </div>
+		        	<h2> Review </h2>
+		          		<div class = "Print Quality">
+		          			<h3>Print Quality: </h3>
+  			        			<p><%= @product1.feature1 %></p>
+  			      		</div>
+  			      			<div class = "Ease of Use">
+  			      				<h3>Ease of Use and Setup: </h3>
+  			        			<p><%= @product1.feature2 %></p>
+  			      			</div>
+  			     				 <div class = "Reliability">
+  			     				 	<h3>Reliability</h3>
+  			        				<p><%= @product1.feature3 %></p>
+  			      				</div>
+  			     					 <div class = "Running Expenses">
+  			     					 	<h3>Running Expenses</h3>
+  			       						 <p><%= @product1.feature4 %></p>
+  			     					 </div>
+  			      						<div class = "Value for Money">
+  			      							<h3>Value for Money</h3>
+  			        						<p><%= @product1.feature5 %></p>
+  			      						</div>
+  			    							<h2>Specifications</h2>
+  			      								<div class = "Printer Type">
+  			      									<h4>Printer Type</h4>
+  			        								<p><%= @product1.spec1 %></p>
+  			     								</div>
+  			      									<div class = "Material">
+  			      										<h4>Material</h4>
+  			        									<p><%= @product1.spec2 %></p>
+  			      									</div>
+  			     								 		<div class = "Dimensions">
+  			     								 			<h4>Build Volume</h4>
+  			        										<p><%= @product1.spec3 %></p>
+  			      										</div>
+  			      											<div class = "On Printer Controls">
+  			      												<h4>On Printer Controls</h4>
+  			        											<p><%= @product1.spec4 %></p>
+  			      											</div>
+  			      												<div class = "Extruder Head">
+  			      													<h4>Extruder Head</h4>
+  			        												<p><%= @product1.spec5 %></p>
+  			      												</div>
+  			</div>
+	</div>
+</div>

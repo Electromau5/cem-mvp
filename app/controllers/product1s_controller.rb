@@ -20,7 +20,6 @@ class Product1sController < ApplicationController
 
   def show
   	@product1 = Product1.find(params[:id])
-    @product1_listings = @product1.listings
   end 
 
   def edit
@@ -46,6 +45,6 @@ class Product1sController < ApplicationController
   def product1_params
   	params.require(:product1).permit(:title, :feature1, :feature2, 
   								:feature3, :feature4, :feature5, :spec1, 
-  								:spec2, :spec3, :spec4, :spec5)
+  								:spec2, :spec3, :spec4, :spec5, :image)
   end 
 end

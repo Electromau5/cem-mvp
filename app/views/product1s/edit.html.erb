@@ -11,7 +11,7 @@
 			<%= f.label :feature1, 'Print Quality'  %>
 			<%= f.text_area :feature1, class: 'form-control' %>
 
-			<%= f.label :feature2, 'Ease of Use' %>
+			<%= f.label :feature2, 'Ease of Use and Setup' %>
 			<%= f.text_area :feature2, class: 'form-control' %>
 
 			<%= f.label :feature3, 'Reliability' %>
@@ -39,6 +39,9 @@
 
 			<%= f.label :spec5, 'Extruder Head' %>
 			<%= f.text_field :spec5, class: 'form-control' %><br />
+
+			<%= f.label :image %>
+			<%= f.file_field :image, class: 'form-control' %><br />
 
 			<%= f.submit 'Edit your review', class: 'btb btn-primary btn-lg'  %>
 		<% end %>
