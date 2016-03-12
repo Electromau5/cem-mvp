@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+    post '/rate' => 'rater#create', :as => 'rate'
     root 'product1s#new'
     resources :product1s
     
