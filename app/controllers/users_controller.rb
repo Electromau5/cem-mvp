@@ -1,8 +1,10 @@
 class UsersController < ApplicationController
 	
 	before_action :set_users, only: [:edit, :update, :show, :destroy]
-	before_action :require_same_user, only: [:edit, :update, :show, :destroy]
-	before_action :require_admin, only: [:edit, :update, :show, :destroy]
+	before_action :require_user, except: [:show]
+	before_action :require_same_user, only: [:edit, :update, :destroy]
+	before_action :require_admin, except: [:show]
+
 	
 	def index
 		@user = User.all
@@ -45,7 +47,7 @@ class UsersController < ApplicationController
 
 private
 	def user_params
-		params.require(:user).permit(:username, :email, :password)
+		params.require(:user).permit(:username, :email, :password, :storename, :description, :location)
 	end
 
 	def set_users
@@ -53,9 +55,10 @@ private
 	end
 
 	def require_same_user
-		if (logged_in? && current_user != @user) || (logged_in? && !current_user.admin)
-			#flash[:danger] = "You can only edit your own account"
-			redirect_to root_path
+		if current_user != @user
+			flash[:danger] = "You can only edit your own account"
+				redirect_to root_path
 		end
 	end
+
 end

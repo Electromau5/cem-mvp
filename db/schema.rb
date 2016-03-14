@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160314002859) do
+ActiveRecord::Schema.define(version: 20160314175444) do
 
   create_table "average_caches", force: :cascade do |t|
     t.integer  "rater_id"
@@ -20,6 +20,35 @@ ActiveRecord::Schema.define(version: 20160314002859) do
     t.float    "avg",           null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "listings", force: :cascade do |t|
+    t.string   "name"
+    t.decimal  "price"
+    t.text     "feature1"
+    t.text     "feature2"
+    t.text     "feature3"
+    t.string   "site"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.string   "image2_file_name"
+    t.string   "image2_content_type"
+    t.integer  "image2_file_size"
+    t.datetime "image2_updated_at"
+    t.string   "image3_file_name"
+    t.string   "image3_content_type"
+    t.integer  "image3_file_size"
+    t.datetime "image3_updated_at"
+    t.string   "image4_file_name"
+    t.string   "image4_content_type"
+    t.integer  "image4_file_size"
+    t.datetime "image4_updated_at"
+    t.string   "image5_file_name"
+    t.string   "image5_content_type"
+    t.integer  "image5_file_size"
+    t.datetime "image5_updated_at"
   end
 
   create_table "overall_averages", force: :cascade do |t|
@@ -83,6 +112,9 @@ ActiveRecord::Schema.define(version: 20160314002859) do
     t.string   "password_digest"
     t.boolean  "admin",           default: false
     t.boolean  "seller",          default: false
+    t.string   "location"
+    t.text     "description"
+    t.string   "storename"
   end
 
 end
