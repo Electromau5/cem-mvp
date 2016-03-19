@@ -1,0 +1,80 @@
+<h1 style="text-align:center">Edit existing Product review</h1>
+<div class="row">
+	<div class="col-md-6 col-md-offset-3">
+		<%= form_for @review do |f| %>
+	
+			<%= f.label :title %>
+			<%= f.text_field :title, class: 'form-control' %>
+
+			<h2>Review:</h2>
+
+			<%= f.label :ft1, 'Feature1'  %>
+			<%= f.text_field :ft1, class: 'form-control' %>
+
+			<%= f.label :f1, 'Details'  %>
+			<%= f.text_area :f1, class: 'form-control' %>
+
+			<%= f.label :ft2, 'Feature2'  %>
+			<%= f.text_field :ft2, class: 'form-control' %>
+
+			<%= f.label :f2, 'Details'  %>
+			<%= f.text_area :f2, class: 'form-control' %>
+
+			<%= f.label :ft3, 'Feature3'  %>
+			<%= f.text_field :ft3, class: 'form-control' %>
+
+			<%= f.label :f3, 'Details'  %>
+			<%= f.text_area :f3, class: 'form-control' %>
+
+			<%= f.label :ft4, 'Feature4'  %>
+			<%= f.text_field :ft4, class: 'form-control' %>
+
+			<%= f.label :f4, 'Details'  %>
+			<%= f.text_area :f4, class: 'form-control' %>
+
+			<%= f.label :ft5, 'Feature5'  %>
+			<%= f.text_field :ft5, class: 'form-control' %>
+
+			<%= f.label :f5, 'Details'  %>
+			<%= f.text_area :f5, class: 'form-control' %>
+
+
+			<h2>Specifications:</h2>
+
+			<%= f.label :st1, 'Spec1' %>
+			<%= f.text_field :st1, class: 'form-control' %>
+
+			<%= f.label :s1, 'Details' %>
+			<%= f.text_field :s1, class: 'form-control' %>
+
+			<%= f.label :st2, 'Spec2' %>
+			<%= f.text_field :st2, class: 'form-control' %>
+	
+			<%= f.label :s2, 'Details'%>
+			<%= f.text_field :s2, class: 'form-control' %>
+
+			<%= f.label :st3, 'Spec3' %>
+			<%= f.text_field :st3, class: 'form-control' %>
+
+			<%= f.label :s3, 'Details' %>
+			<%= f.text_field :s3, class: 'form-control' %>
+
+			<%= f.label :st4, 'Spec4' %>
+			<%= f.text_field :st4, class: 'form-control' %>
+
+			<%= f.label :s4, 'Details' %>
+			<%= f.text_field :s4, class: 'form-control' %>
+
+			<%= f.label :st5, 'Spec5' %>
+			<%= f.text_field :st5, class: 'form-control' %>
+
+			<%= f.label :s5, 'Details' %>
+			<%= f.text_field :s5, class: 'form-control' %>
+
+			<%= f.label :image %>
+			<%= f.file_field :image, class: 'form-control' %><br />
+
+			<%= f.submit 'Edit review', class: 'btn btn-primary btn-default'  %>
+		<% end %>
+	</div>
+</div>

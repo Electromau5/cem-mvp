@@ -16,6 +16,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 gem 'paperclip', '~> 4.3', '>= 4.3.3'
 gem 'ratyrate'
+gem 'elevatezoom-rails'
 
 group :development, :test do
   gem 'byebug'

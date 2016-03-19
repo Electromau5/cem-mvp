@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.elevateZoom-3.0.8.min
 //= require bootstrap-sprockets
 //= require jquery.raty
 //= require ratyrate

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160314175444) do
+ActiveRecord::Schema.define(version: 20160319063307) do
 
   create_table "average_caches", force: :cascade do |t|
     t.integer  "rater_id"
@@ -103,6 +103,36 @@ ActiveRecord::Schema.define(version: 20160314175444) do
   end
 
   add_index "rating_caches", ["cacheable_id", "cacheable_type"], name: "index_rating_caches_on_cacheable_id_and_cacheable_type"
+
+  create_table "reviews", force: :cascade do |t|
+    t.string   "title"
+    t.string   "ft1"
+    t.text     "f1"
+    t.string   "ft2"
+    t.text     "f2"
+    t.string   "ft3"
+    t.text     "f3"
+    t.string   "ft4"
+    t.text     "f4"
+    t.string   "ft5"
+    t.text     "f5"
+    t.string   "st1"
+    t.string   "s1"
+    t.string   "st2"
+    t.string   "s2"
+    t.string   "st3"
+    t.string   "s3"
+    t.string   "st4"
+    t.string   "s4"
+    t.string   "st5"
+    t.string   "s5"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "username"

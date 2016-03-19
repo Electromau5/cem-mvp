@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
     post '/rate' => 'rater#create', :as => 'rate'
-    root 'product1s#new'
+    root 'reviews#new'
     resources :product1s
+    resources :reviews
     
     get 'generateanewuseraccountforcem', to: 'users#new'
     resources :users, except: [:new]
