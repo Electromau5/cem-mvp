@@ -2,46 +2,44 @@
 	<div class = "jumbotron">
 		<div class = "row">
 			<div class = "col-md-6">
-						<%= image_tag @listing.image.url(:medium), data: { zoom_image: @listing.image.url(:large) }, :class => "zoom", :id => "image1" %>
-				<div class -"row">
-					<div class = "col-md-10">
-							<%= image_tag @listing.image2.url(:thumb), data: { zoom_image: @listing.image2.url(:large) }, :class => "zoom2"  if @listing.image2? %>
-							<%= image_tag @listing.image3.url(:thumb), data: { zoom_image: @listing.image3.url(:large) }, :class => "zoom2" if @listing.image3? %>
-							<%= image_tag @listing.image4.url(:thumb), data: { zoom_image: @listing.image4.url(:large) }, :class => "zoom2" if @listing.image4? %>
-							<%= image_tag @listing.image5.url(:thumb), data: { zoom_image: @listing.image5.url(:large) }, :class => "zoom2" if @listing.image5? %>
-					</div>
-				</div>
+					<%= image_tag @listing.image.url(:medium), :data => { zoom_image: @listing.image.url(:large) }, :class => "zoom" %>
+						<div class ="row">
+							<div class = "col-md-10">
+								<div id="gallery">
+								 <%= link_to image_tag(@listing.image.url(:thumb)), '#', data: { image: @listing.image.url(:medium), zoom_image: @listing.image.url(:large) }  %>
+								 <%= link_to image_tag(@listing.image2.url(:thumb)), '#', data: { image: @listing.image2.url(:medium), zoom_image: @listing.image2.url(:large) }  %>
+								 <%= link_to image_tag(@listing.image3.url(:thumb)), '#', data: { image: @listing.image3.url(:medium), zoom_image: @listing.image3.url(:large) }  %>
+								 <%= link_to image_tag(@listing.image4.url(:thumb)), '#', data: { image: @listing.image4.url(:medium), zoom_image: @listing.image4.url(:large) }  %>
+								 <%= link_to image_tag(@listing.image5.url(:thumb)), '#', data: { image: @listing.image5.url(:medium), zoom_image: @listing.image5.url(:large) }  %>
 
-			</div>			
-						
-				<div class = "col-md-6">
-					<div class = "listing_set_1">
-						<div class="title" style="font-weight:bold;font-size:20px">
-							Product Name: <br/>
-						</div>
-							<div clas="fill" style="font-size:18px">
-								<%= @listing.name %><br /><br />
+								</div>
 							</div>
-									<div class="title" style="font-weight:bold;font-size:20px">
-										Condition: <br />
-									</div>
-										<div clas="fill" style="font-size:15px">
-											<%= @listing.condition %>
-										</div><br />
+								
 						</div>
+				</div>			
+							
+					<div class = "col-md-6">
+						<div class = "listing_set_1">
 							<div class="title" style="font-weight:bold;font-size:20px">
-								Features: <br/>
+								Product Name: <br/>
 							</div>
-								<%= @listing.feature1 %><br /><br />
-								<%= @listing.feature2 %><br /><br />
-								<%= @listing.feature3 %><br /><br />
-									<span class = "label label-info" style="font-size:25px;background-color:#008ac1;padding:6px">
-										<%= number_to_currency(@listing.price) %>
-									</span><br /><br />
-								This item can be bought <%= link_to 'here', "#{@listing.site}" %>
-				   </div>
+								<div clas="fill" style="font-size:18px">
+									<%= @listing.name %><br /><br />
+								</div>
+						</div>
+								<div class="title" style="font-weight:bold;font-size:20px">
+									Features: <br/>
+								</div>
+									<%= @listing.feature1 %><br /><br />
+									<%= @listing.feature2 %><br /><br />
+									<%= @listing.feature3 %><br /><br />
+										<span class = "label label-info" style="font-size:25px;background-color:#008ac1;padding:6px">
+											<%= number_to_currency(@listing.price) %>
+										</span><br /><br />
+									This item can be bought <%= link_to 'here', "#{@listing.site}" %>
+					   </div>
+				</div>
 			</div>
 		</div>
-	</div>
 
-	
+		

@@ -3,6 +3,7 @@ Rails.application.routes.draw do
     root 'reviews#new'
     resources :product1s
     resources :reviews
+    resources :listings
     
     get 'generateanewuseraccountforcem', to: 'users#new'
     resources :users, except: [:new]
@@ -12,7 +13,6 @@ Rails.application.routes.draw do
     post 'login', to: 'sessions#create'
     delete 'logout', to: 'sessions#destroy'
 
-    resources :listings
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
