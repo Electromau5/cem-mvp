@@ -5,5 +5,7 @@ $ ->
 	 scrollZoom: true
 	 responsive: true
 	 borderSize: 1
-	 
+	 cursor: 'pointer'
+	 galleryActiveClass: 'active'
+	 imageCrossfade: true
 

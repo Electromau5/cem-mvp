@@ -22,6 +22,5 @@ class Listing < ActiveRecord::Base
   validates_attachment_content_type :image3, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
   validates_attachment_content_type :image4, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
   validates_attachment_content_type :image5, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
-  #has_and_belongs_to_many :categories
-  #belongs_to :seller
+  has_and_belongs_to_many :reviews
 end

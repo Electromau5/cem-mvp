@@ -19,6 +19,7 @@ end
 
 def show
   @listing = Listing.find(params[:id])
+  @listing_reviews = @listing.reviews
 end
 
 def edit
