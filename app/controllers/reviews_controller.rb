@@ -46,6 +46,7 @@ class ReviewsController < ApplicationController
   def review_params
   	params.require(:review).permit(:title,:ft1,:ft2,:ft3,:ft4,:ft5,:f1,:f2,:f3,
                                    :f4,:f5,:st1,:st2,:st3,:st4,:st5,:s1,:s2,:s3,
-                                   :s4,:s5,:image)
+                                   :s4,:s5,:image, :rating1, :rating2, :rating3,
+                                    :rating4, :rating5, :spec)
   end 
 end

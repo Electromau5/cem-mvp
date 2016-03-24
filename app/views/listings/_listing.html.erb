@@ -1,15 +1,17 @@
-  <div class = "container-fluid">
+ <%= render 'layouts/seperator' %>
+ <div class = "container">
     <div class = "row">
 		<% obj.each do |listing| %>
 		  <div class = "col-xs-6 col-md-3">
 		    <div class = "thumbnail" style="border-radius:0;border:1px solid #000">
              <%= link_to image_tag(listing.image.url(:medium)), listing %>
-			  <div class = "listing_name">
-			   	<p><%= listing.name %></p>
+             <div class="caption">
+			 	<div class = "listing_name">
+			   		<%= truncate(listing.name, length: 50) %>
 			 	</div>
+			 </div>
 		     </div>
           </div>
 		<% end %>
 	</div>
-  </div>	  
-		
+  </div>

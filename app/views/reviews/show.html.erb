@@ -2,27 +2,26 @@
 <div class = "container-fluid">
 	<div class = "row">
 		<div class="col-xs-12 col-md-5">
-			<%= image_tag @review.image.url(:large) %>
+			<%= image_tag @review.image.url(:medium) %>
   				<div class = "review_title">
 			  	  <p><%= @review.title %></p>
 		      </div>
       </div>
       <div class="col-xs-12 col-md-4">
-              <% if logged_in? && current_user.admin %>
-              <h2>Ratings</h2>
-                <%= @review.ft1 %> : <%= rating_for @review, "feature1", :star_on => "blue-star.png", :star_off => "white-star.png", :disable_after_rate => true %><br />
-
-                <%= @review.ft2 %> : <%= rating_for @review, "feature2", :star_on => "blue-star.png", :star_off => "white-star.png", :disable_after_rate => true %><br />
-                
-                <%= @review.ft3 %> : <%= rating_for @review, "feature3", :star_on => "blue-star.png", :star_off => "white-star.png", :disable_after_rate => true %><br />
-                
-                <%= @review.ft4 %> : <%= rating_for @review, "feature4", :star_on => "blue-star.png", :star_off => "white-star.png", :disable_after_rate => true %><br />
-                
-                <%= @review.ft5 %> : <%= rating_for @review, "feature5", :star_on => "blue-star.png", :star_off => "white-star.png", :disable_after_rate => true %><br />
-              <% end %>
-      </div>
+        <h2>Ratings</h2>
+        <h4><%= @review.ft1 %> :</h4>
+        <div class="feature1"  data-score= <%= @review.rating1 %> ></div>
+        <h4><%= @review.ft2 %> :</h4>
+        <div class="feature2"  data-score= <%= @review.rating2 %> ></div>
+        <h4><%= @review.ft3 %> :</h4>
+        <div class="feature3"  data-score= <%= @review.rating3 %> ></div>
+        <h4><%= @review.ft4 %> :</h4>
+        <div class="feature4"  data-score= <%= @review.rating4 %> ></div>
+        <h4><%= @review.ft5 %> :</h4>
+        <div class="feature5"  data-score= <%= @review.rating5 %> ></div>
+         </div>
        <div class="col-xs-12 col-md-3">
-          <h2>Specifications</h2>
+          <h2 style="color:#545454"><%= @review.spec %></h2>
             <h4><%= @review.st1 %></h4>
               <p><%= @review.s1 %></p>
             <h4><%= @review.st2 %></h4>

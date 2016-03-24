@@ -15,8 +15,12 @@ button
 }
 .listing_name
 {
-	font-family: Helvetica,sans-serif,Verdana;
-	text-align:center
+	font-family: 'Nexa Bold',sans-serif;
+	text-align:center;
+	font-weight:normal;
+	font-size:15px;
+	line-height:21.7px;
+	color: #5eabff;
 }
 .jumbotron
 {
@@ -35,6 +39,7 @@ button
 {
 	font-family: 'Helvetica Neue', sans-serif;
 }
+
 .label
 {
 	border-radius: 0;
@@ -50,3 +55,13 @@ button
 	border: 1px solid black;
 	margin-top: 3px;
 }
+
+.listing_header
+{
+	color: #000;
+}
+.feature1
+{
+	width: 50%;
+}
+
