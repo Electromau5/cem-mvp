@@ -2,16 +2,16 @@
   <tr>
     <th class="center">Image</th>
     <th class="center">Name</th>
-    <th class="center">Price</th>
     <th class="center">Brand</th>
+    <th class="center">Price</th>
     <th class="center">Action</th>
   </tr>
 <% @listing.each do |listing| %>
   <tr>
     <td><%= image_tag listing.image.url(:thumb) %></td>
-    <td><%= listing.name %></td>
-    <td><%= number_to_currency(listing.price) %></td>
+    <td><%= truncate(listing.name, length: 50) %></td>
     <td><%= listing.seller.brand if listing.seller %></td>
+    <td><%= number_to_currency(listing.price) %></td>
     <td>
       <div class="btn-group">
         <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

@@ -1,5 +1,6 @@
 class Seller < ActiveRecord::Base
 	has_many :listings
+	has_secure_password
 	before_save { self.email = email.downcase }
 	validates :brand, presence: true, uniqueness: { case_sensitive: false }, length: { minimum: 3, maximum: 25 }
 
