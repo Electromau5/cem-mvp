@@ -1,4 +1,6 @@
 class Listing < ActiveRecord::Base
+  belongs_to :seller
+  validates :seller_id, presence: true
 	validates :name,presence: :true
 	validates :feature1,:feature2,:feature3, presence: :true, length: { minimum: 10, maximum: 500 }
   validates :price, presence: :true 

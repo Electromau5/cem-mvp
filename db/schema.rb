@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160328090521) do
+ActiveRecord::Schema.define(version: 20160328115253) do
 
   create_table "listings", force: :cascade do |t|
     t.string   "name"
@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(version: 20160328090521) do
     t.string   "image5_content_type"
     t.integer  "image5_file_size"
     t.datetime "image5_updated_at"
+    t.integer  "seller_id"
   end
 
   create_table "listings_reviews", id: false, force: :cascade do |t|
