@@ -1,8 +1,11 @@
 class ReviewsController < ApplicationController
 
-	def index
+  before_action :require_seller, except: [:show, :index]
+  before_action :require_admin, except: [:show, :index]
+  
+  def index
 		@review = Review.all
-  	end
+  end
 
   	def new
 		@review  = Review.new
@@ -48,5 +51,17 @@ class ReviewsController < ApplicationController
                                    :f4,:f5,:st1,:st2,:st3,:st4,:st5,:s1,:s2,:s3,
                                    :s4,:s5,:image, :rating1, :rating2, :rating3,
                                     :rating4, :rating5, :spec)
-  end 
+  end
+
+  def require_seller
+    if !logged_in?
+      redirect_to root_path
+    end
+  end
+
+  def require_admin
+    if !current_seller.admin?
+      redirect_to root_path
+    end
+  end
 end

@@ -1,1 +1,5 @@
+<h1>Welcome to <%= @seller.brand %>'s Store </h1>
 <%= render 'listings/listing', obj: @seller_listings %>
+ <% if logged_in? && current_seller == @seller %>
+	<%= link_to 'Add a new product', new_listing_path, class: "btn btn-default" %>
+<% end %>

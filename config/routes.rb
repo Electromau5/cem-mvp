@@ -1,10 +1,17 @@
 Rails.application.routes.draw do
     root 'reviews#index'
     resources :reviews
+    
     resources :listings
+    
+    resources :applicants
 
     get 'generateanewseller', to: 'sellers#new'
     resources :sellers, except: [:new] 
+
+    get 'login', to: 'sessions#new'
+    post 'login', to: 'sessions#create'
+    delete 'logout', to: 'sessions#destroy'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

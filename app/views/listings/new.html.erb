@@ -1,32 +1,40 @@
 <div class = "container-fluid">
 	<h1 style="text-align:center">Create a new Listing</h1>
-		<div class = "row">
-			<div class = "col-md-6 col-md-offset-3">
-				<%= form_for @listing do |l| %>
-					<%= l.label :name %><br />
-					<%= l.text_field :name, class: "form-control" %>
-					<%= l.label :feature1 %><br />
-					<%= l.text_area :feature1, class: "form-control" %>
-					<%= l.label :feature2 %><br />
-					<%= l.text_area :feature2, class: "form-control" %>
-					<%= l.label :feature3 %><br />
-					<%= l.text_area :feature3, class: "form-control" %>
-					<%= l.label :price %><br />
-					<%= l.text_field :price, class: "form-control" %>
-					<%= l.label :image %>
-					<%= l.file_field :image, class: "form-control"%><br />
-					<%= l.label :image2 %>
-					<%= l.file_field :image2, class: "form-control"%><br />
-					<%= l.label :image3 %>
-					<%= l.file_field :image3, class: "form-control"%><br />
-					<%= l.label :image4 %>
-					<%= l.file_field :image4, class: "form-control"%><br />
-					<%= l.label :image5 %>
-					<%= l.file_field :image5, class: "form-control"%>
-					<%= l.label :site %><br />
-					<%= l.text_field :site, class: "form-control" %><br />
-					<%= l.submit 'List product', class: 'btn btn-primary btn-lg'  %>
-				<% end %>
+		<% if @listing.errors.any? %>
+			<h2>Errors</h2>
+				<ul>
+					<% @listing.errors.full_messages.each do |msg| %>
+						<li><%= msg %></li>
+					<% end %>
+				</ul>
+		<% end %>
+			<div class = "row">
+				<div class = "col-md-6 col-md-offset-3">
+					<%= form_for @listing do |l| %>
+						<%= l.label :name %><br />
+						<%= l.text_field :name, class: "form-control" %><br />
+						<%= l.label :feature1 %><br />
+						<%= l.text_area :feature1, class: "form-control" %>
+						<%= l.label :feature2 %><br />
+						<%= l.text_area :feature2, class: "form-control" %>
+						<%= l.label :feature3 %><br />
+						<%= l.text_area :feature3, class: "form-control" %>
+						<%= l.label :price %><br />
+						<%= l.text_field :price, class: "form-control" %>
+						<%= l.label :image %>
+						<%= l.file_field :image, class: "form-control"%><br />
+						<%= l.label :image2 %>
+						<%= l.file_field :image2, class: "form-control"%><br />
+						<%= l.label :image3 %>
+						<%= l.file_field :image3, class: "form-control"%><br />
+						<%= l.label :image4 %>
+						<%= l.file_field :image4, class: "form-control"%><br />
+						<%= l.label :image5 %>
+						<%= l.file_field :image5, class: "form-control"%>
+						<%= l.label :site %><br />
+						<%= l.text_field :site, class: "form-control" %><br />
+						<%= l.submit 'List product', class: 'btn btn-primary btn-lg'  %>
+					<% end %>
+				</div>
 			</div>
-		</div>
 </div>

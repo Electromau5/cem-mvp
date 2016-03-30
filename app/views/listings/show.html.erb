@@ -39,8 +39,17 @@
 										<span class = "label label-info" style="font-size:25px;background-color:#008ac1;padding:6px">
 											<%= number_to_currency(@listing.price) %>
 										</span><br /><br />
-									This item can be bought <%= link_to 'here', "#{@listing.site}" %>
+									This item can be bought <%= link_to 'here', "#{@listing.site}" %><br /><br />
 					   </div>
+					   	
+							<div class = "col-md-4">
+								<% if (logged_in? && current_seller == @listing.seller) %>
+								<%= link_to 'Edit', edit_listing_path(@listing), class: "btn btn-default" %>
+								<%= link_to 'Delete', listing_path(@listing), method: :delete, data: { confirm: "Are you sure you want to delete this listing"}, class: "btn btn-default" %>
+							
+						<% end %>
+							<%= link_to 'More from this brand', @listing_seller, class: "btn btn-success" %>
+						</div>
 				</div>
 			</div>
 		</div>

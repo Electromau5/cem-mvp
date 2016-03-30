@@ -13,11 +13,23 @@
     </div>
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
+          <% if logged_in? && current_seller.admin? %>
+          <li><%= link_to 'Add Review', new_review_path %>
+          <li><%= link_to 'Applicants', applicants_path %>
+          <% end %>
           <li><a href="#">How it Works<span class="sr-only">(current)</span></a></li>
         </ul>
           <ul class="nav navbar-nav navbar-right">
-                 
-        </ul>
+            <% if logged_in? && current_seller %>
+                <li><%= link_to 'My Brand page', seller_path(current_seller) %></li>
+                <li><%= link_to 'Account Settings', edit_seller_path(current_seller) %></li>
+                <li><%= link_to 'Log out', logout_path, method: :delete %></li>
+            <% else %>
+                <li><%= link_to 'Log in', login_path %></li>
+                <li><%= link_to 'Request a seller account', new_applicant_path %></li>
+            <% end %>
+          </ul>
+          </ul>
       </div>
   </div>
 </nav>

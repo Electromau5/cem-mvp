@@ -11,7 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160328193435) do
+ActiveRecord::Schema.define(version: 20160329093056) do
+
+  create_table "applicants", force: :cascade do |t|
+    t.string   "brand"
+    t.string   "email"
+    t.string   "location"
+    t.text     "description"
+    t.string   "category"
+    t.text     "product"
+    t.string   "site"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "listings", force: :cascade do |t|
     t.string   "name"
@@ -92,6 +104,7 @@ ActiveRecord::Schema.define(version: 20160328193435) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "password_digest"
+    t.boolean  "admin",           default: false
   end
 
 end
