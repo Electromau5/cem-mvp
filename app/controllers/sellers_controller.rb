@@ -48,7 +48,7 @@ private
 
 	
 	def seller_params
-		params.require(:seller).permit(:brand, :email, :password, :location, :description, :admin)
+		params.require(:seller).permit(:brand, :email, :password, :location, :description, :admin, :image, :image2)
 	end
 
 	def set_seller
@@ -62,7 +62,7 @@ private
     end
   
     def require_same_seller
-      if current_seller != @seller
+      if  current_seller != @seller 
         redirect_to root_path
       end
     end

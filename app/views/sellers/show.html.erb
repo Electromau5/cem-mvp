@@ -1,5 +1,25 @@
-<h1>Welcome to <%= @seller.brand %>'s Store </h1>
-<%= render 'listings/listing', obj: @seller_listings %>
- <% if logged_in? && current_seller == @seller %>
-	<%= link_to 'Add a new product', new_listing_path, class: "btn btn-default" %>
-<% end %>
+<div class="container-fluid">
+	<div class="jumbotron" style="border:2px solid #bfe6ff">
+		<div class="row">
+			<div class="col-md-6">
+				<%= image_tag @seller.image.url(:medium), class: "img-circle" %>
+			</div>
+				<div class="col-md-6">
+					<div class="seller-brand">
+						<h1><%= @seller.brand %></h1>
+					</div>
+						<div class="seller-description">
+							<p style="font-size:18px"><%= @seller.description %></p>
+						</div>
+							<div class="seller-location">
+								<p><%= @seller.location %></p>
+							</div>
+				</div>
+			</div>
+		</div>
+	</div>
+			<%= render 'listings/listing', obj: @seller_listings %>
+ 				<% if logged_in? && current_seller == @seller %>
+					<%= link_to 'Add a new product', new_listing_path, class: "btn btn-default" %>
+				<% end %>
+
