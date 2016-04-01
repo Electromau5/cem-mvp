@@ -12,7 +12,6 @@ $ ->
 $ ->	 
 	$('.feature1').raty
 	  readOnly: true
-	  path: '/assets'
 	  score: ->
 	    $(this).attr 'data-score'
 $ ->	 
