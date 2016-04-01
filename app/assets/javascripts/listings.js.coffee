@@ -13,8 +13,6 @@ $ ->
 	$('.feature1').raty
 	  readOnly: true
 	  path: '/assets'
-	  starOn: 'blue-star copy.png'
-	  starOff: 'white-star copy.png'
 	  score: ->
 	    $(this).attr 'data-score'
 $ ->	 
