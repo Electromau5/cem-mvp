@@ -19,3 +19,6 @@
 # Ignore Environment Configuration Files
 config/database.yml
 .env
+
+#Igonore Initializers Files
+/config/initializers/env.rb
