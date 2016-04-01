@@ -36,8 +36,8 @@
 									<%= @listing.feature1 %><br /><br />
 									<%= @listing.feature2 %><br /><br />
 									<%= @listing.feature3 %><br /><br />
-										<span class = "label label-info" style="font-size:25px;background-color:#008ac1;padding:6px">
-											<%= number_to_currency(@listing.price) %>
+										<span style="font-size:25px;border:1px solid #008ac1;padding:6px">
+											₹ <%= @listing.price %>
 										</span><br /><br />
 									This item can be bought <%= link_to 'here', "#{@listing.site}" %><br /><br />
 					   </div>
