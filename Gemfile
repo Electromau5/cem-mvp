@@ -17,7 +17,6 @@ gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 gem 'paperclip', '~> 4.3', '>= 4.3.3'
 gem 'elevatezoom-rails'
 gem 'jquery-raty-rails', github: 'bmc/jquery-raty-rails'	
-gem 'aws-sdk', '~> 2'
 
 group :development, :test do
   gem 'byebug'
