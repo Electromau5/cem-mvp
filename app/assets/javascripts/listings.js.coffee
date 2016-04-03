@@ -14,6 +14,7 @@ $ ->
 	  readOnly: true
 	  score: ->
 	    $(this).attr 'data-score'
+
 $ ->	 
 	$('.feature2').raty
 	  readOnly: true
