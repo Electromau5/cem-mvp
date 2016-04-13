@@ -12,7 +12,7 @@ $ ->
 $ ->	 
 	$('.feature1').raty
 	  readOnly: true
-	  path: '/assets/'
+	  path: '/public/assets/'
 	  starOn: 'blue-star copy.png'
 	  starOff: 'white-star copy.png'
 	  score: ->
