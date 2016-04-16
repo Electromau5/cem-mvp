@@ -18,6 +18,7 @@ gem 'paperclip', '~> 4.3', '>= 4.3.3'
 gem 'elevatezoom-rails'
 gem 'jquery-raty-rails', github: 'bmc/jquery-raty-rails'
 gem 'masonry-rails', '~> 0.2.4'	
+gem 'aws-sdk', '< 2.0'
 
 group :development, :test do
   gem 'byebug'
