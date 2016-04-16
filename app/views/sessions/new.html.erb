@@ -1,17 +1,24 @@
-<h1 style="text-align:center">Access your seller Account</h1>
-<div class="row">
-	<div class="col-md-6 col-md-offset-3">
-		<%= form_for(:session,:html => {class: "form-horizontal", role: "form"}, url: login_path) do |f| %>
-
-			<%= f.label :brand %>
-			<%= f.text_field :brand, class: 'form-control', autofocus: true %>
-
-			<%= f.label :password %>
-			<%= f.password_field :password, class: 'form-control',placeholder: "Enter password", autofocus: true %> <br />
-			
-			<%= f.submit 'Log in', class: 'btn btn-primary' %><br /><br />
-					
-			<%= link_to 'Cancel', reviews_path %>
-		<% end %>
+<h1 style="text-align:center;font-family: 'SubtleSansLight', sans-serif">Access your seller Account</h1>
+	<div class="row">
+		<div class="col-md-6 col-md-offset-3">
+			<%= form_for(:session,:html => {class: "form-horizontal", role: "form"}, url: login_path) do |f| %>
+				<div class = "login-details">
+					<%= f.label :brand, 'Seller Id' %>
+				</div>
+					<%= f.text_field :brand, class: 'form-control', autofocus: true, placeholder: "Enter your seller name" %>
+						<div class = "login-details">
+							<%= f.label :password %>
+						</div>
+							<%= f.password_field :password, class: 'form-control',placeholder: "Enter password", autofocus: true %> <br />
+								<div class="login" >
+									<%= f.submit 'Log in', class: "btn btn-primary" %>
+								</div>
+									<div class="login">
+										<%= link_to 'Request Seller account', new_applicant_path %>	
+									</div>
+										<div class="login">	
+											<%= link_to 'Cancel', reviews_path %>
+										</div>
+			<% end %>
+		</div>
 	</div>
-</div>

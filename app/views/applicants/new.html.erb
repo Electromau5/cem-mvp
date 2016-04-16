@@ -1,74 +1,85 @@
-<h1 align="center">Request a Seller Account</h1>
+<h1 align="center" style="font-family: 'SubtleSansLight', sans-serif">Request a Seller Account</h1>
 	
 		<div class='row'>
 			<div class='col-xs-12'>
 				<%= form_for(@applicant, :html => {class: "form-horizontal", role: "form"}) do |f| %>
 					<div class="form-group">
-						<div class="control-label col-sm-2">
-							<%= f.label :brand, 'Please enter the name of your store / brand' %>
+						<div class="login-details">
+							<div class="control-label col-sm-2">
+								<%= f.label :brand, 'Seller Name' %>
+							</div>
 						</div>
 							<div class="col-sm-8">
-								<%= f.text_field :brand, class: "form-control", placeholder: "Enter brand", autofocus: true %>
+								<%= f.text_field :brand, class: "form-control", placeholder: "Enter seller name", autofocus: true %>
 							</div>
 					</div>
 						<div class="form-group">
-							<div class="control-label col-sm-2">
-								<%= f.label :email %>
+							<div class="login-details">
+								<div class="control-label col-sm-2">
+									<%= f.label :email %>
+								</div>
 							</div>
 								<div class="col-sm-8">
 									<%= f.email_field :email, class: "form-control", placeholder: "Enter email", autofocus: true %>
-							</div>
+								</div>
 						</div>
 								<div class="form-group">
+									<div class="login-details">
 									<div class="control-label col-sm-2">
 										<%= f.label :location %>
 									</div>
+								</div>
 										<div class="col-sm-8">
-											<%= f.text_field :location, class: "form-control", placeholder: "Edit Location", autofocus: true %>
+											<%= f.text_field :location, class: "form-control", placeholder: "Enter Location", autofocus: true %>
 										</div>
 								</div>
 									<div class="form-group">
+										<div class="login-details">
 										<div class="control-label col-sm-2">
-											<%= f.label :description, "Please provide a brief description of your brand (within 150 characters)" %>
+											<%= f.label :description, "Description (within 200 characters)" %>
 										</div>
+									</div>
 											<div class="col-sm-8">
-												<%= f.text_field :description, class: "form-control", placeholder: "Edit Location", autofocus: true %>
+												<%= f.text_area :description, class: "form-control", placeholder: "Description", autofocus: true %>
 											</div>
 									</div>
 									<div class="form-group">
+										<div class="login-details">
 										<div class="control-label col-sm-2">
-											<%= f.label :category, 'Please list a minimum of 3 categories that your featured products fall under' %>
+											<%= f.label :category, 'Target audience (age, gender, interests)' %>
 										</div>
+									</div>
 											<div class="col-sm-8">
-												<%= f.text_field :category, class: "form-control", placeholder: "Edit Location", autofocus: true %>
+												<%= f.text_field :category, class: "form-control", placeholder: "Who are you selling to?", autofocus: true %>
 											</div>
 									</div>
 									<div class="form-group">
+										<div class="login-details">
 										<div class="control-label col-sm-2">
-											<%= f.label :product, 'Please list a minimum of 10 specific products that your brand sells' %>
+											<%= f.label :product, 'Product types' %>
 										</div>
+									</div>
 											<div class="col-sm-8">
-												<%= f.text_field :product, class: "form-control", placeholder: "Edit Location", autofocus: true %>
+												<%= f.text_field :product, class: "form-control", placeholder: "What kind of products do you sell ?", autofocus: true %>
 											</div>
 									</div>
 									<div class="form-group">
+										<div class="login-details">
 										<div class="control-label col-sm-2">
-											<%= f.label :site, 'Please provide a link where your products are listed / can be purchased' %>
+											<%= f.label :site, 'Website / Facebook Page / Other links' %>
 										</div>
+									</div>
 											<div class="col-sm-8">
-												<%= f.text_field :site, class: "form-control", placeholder: "Edit Location", autofocus: true %>
+												<%= f.text_field :site, class: "form-control", placeholder: "Where can your products be bought ?", autofocus: true %>
 											</div>
 									</div>
 
-
-								<div class="form-group">
-									<div class="col-sm-offset-2 col-sm-10">
-										<%= f.submit "Request Account", class: 'btn btn-primary btn-lg' %>
-									</div>
+								<div class="login" style="margin-left:100px" >
+									<%= f.submit 'Request Account', class: "btn btn-primary" %>
 								</div>
-					<% end %>
-						<div class="col-xs-4 col-xs-offset-4">
-							[ <%= link_to "Cancel account request and return to reviews", reviews_path %> ]
-						</div>
-			</div>
+									<div class="login">
+										<%= link_to 'Cancel', root_path %>	
+									</div>
+									<% end %>
 		</div>
+	</div>
