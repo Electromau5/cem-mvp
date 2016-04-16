@@ -1,16 +1,13 @@
-  <div class = "container-fluid">
-    <div class = "row">
-		<% @review.each do |review| %>
-		  <div class = "col-xs-12 col-md-3 col-sm-6">
-		    <div class = "thumbnail">
-		    	<div class = "post-details">
-            		<%= link_to image_tag(review.image.url(:medium)), review %>
-            		<p style="text-align:center"><%= review.title %></p>
-            	</div>
-		    </div>
+<div class="container-fluid">
+    <div id="grid" class="transitions-enabled">
+      <% @review.each do |review| %>
+        <div class="box" style="background-color:#d6d6d6; border-radius: 0">
+          <%= link_to (image_tag review.image.url(:large)), review %>
+            <div class="jumbotron" style="border-radius: 0;border: 1px solid #999999">
+            <p class="review-title" style="font-size:30px;line-height: 1;"><%= review.title %></p>
           </div>
-		<% end %>
-	</div>
-  </div>	  
- 
-		
+        </div>
+      <% end %>
+ </div>
+</div>
+

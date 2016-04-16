@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require masonry/jquery.masonry
 //= require jquery.elevatezoom
 //= require jquery.raty
 //= require bootstrap-sprockets

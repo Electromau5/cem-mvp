@@ -1,24 +1,36 @@
-.review_title
+#grid
 {
-	font-family: 'Mesa Grande', sans-serif;
-	font-size: 23px;
-	font-weight: thin;
-	margin-top: 5%;
-	color: #777777;
+	margin-left:4%;
 }
 
-.post-details
+.box
+{	
+
+	 border-radius: 0px;
+	 width: 300px;
+	 background-color: #F8F8F8;
+
+}
+
+.review-title
 {
 	font-family:'vertigoFLF-Bold', sans-serif;
-	 font-size:30px;
-	 font-weight: bold;
-	 margin-top: 5%;
-	 color:#777777;
-	 border-radius:0;
-	 border:1px solid black;
+	font-size:50px;
+	font-weight: bold;
+	text-align: center;
+	margin-top: 5%;
+}
+
+.box img {
+  width: 100%;
+}
+
+.box img:hover {
+  cursor: pointer;
 }
 
 .thumbnail
 {
 	border: 0;
 }
+

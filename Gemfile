@@ -16,7 +16,8 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 gem 'paperclip', '~> 4.3', '>= 4.3.3'
 gem 'elevatezoom-rails'
-gem 'jquery-raty-rails', github: 'bmc/jquery-raty-rails'	
+gem 'jquery-raty-rails', github: 'bmc/jquery-raty-rails'
+gem 'masonry-rails', '~> 0.2.4'	
 
 group :development, :test do
   gem 'byebug'
