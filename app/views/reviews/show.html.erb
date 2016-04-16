@@ -6,7 +6,7 @@
 <div class = "container-fluid">
 	<div class = "row">
 		<div class="col-xs-12 col-md-5">
-			<%= image_tag @review.image.url(:large) %>
+			<%= image_tag @review.image.url(:large), class: "review-image" %>
   				<div class = "review_title">
 			  	  <p><%= @review.title %></p>
 		      </div>

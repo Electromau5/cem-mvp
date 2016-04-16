@@ -1,2 +1,14 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+.navbar-default .navbar-nav li > a 
+{
+	color: #fff;
+	font-family: "SubtleSansLight", sans-serif;
+	font-size: 17px;
+}
+
+.navbar-default .navbar-nav li > a:hover
+{
+	color: #a0f7ff;
+}

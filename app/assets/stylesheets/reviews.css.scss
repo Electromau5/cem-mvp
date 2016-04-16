@@ -1,6 +1,15 @@
+.review_title
+{
+	font-family: 'Mesa Grande', sans-serif;
+	font-size: 23px;
+	font-weight: thin;
+	margin-top: 5%;
+	color: #777777;
+}
+
 #grid
 {
-	margin-left:4%;
+	margin-left: 4%;
 }
 
 .box
@@ -28,6 +37,7 @@
 .box img:hover {
   cursor: pointer;
 }
+
 
 .thumbnail
 {

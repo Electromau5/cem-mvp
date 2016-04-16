@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default" style="background-color:#000000">
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -8,7 +8,7 @@
         <span class="icon-bar"></span>
       </button>
       <div class ="navbar-brand">
-        <%= link_to ' bRandShack',root_path %>
+        <%= link_to ' Vulpac',root_path %>
       </div>
     </div>
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -22,7 +22,7 @@
         </ul>
           <ul class="nav navbar-nav navbar-right">
             <% if logged_in? && current_seller %>
-                <li><%= link_to 'My Products', seller_path(current_seller) %></li>
+                <li><%= link_to 'My Products', seller_path(current_seller), class: "li" %></li>
                 <li><%= link_to 'Account Settings', edit_seller_path(current_seller) %></li>
                 <li><%= link_to 'Log out', logout_path, method: :delete %></li>
             <% else %>
