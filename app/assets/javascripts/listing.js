@@ -16,6 +16,9 @@ $(function() {
 $(function() {
   return $('.feature1').raty({
     readOnly: true,
+    starOff: 'white-star copy.png',
+    starOn: 'blue-star.png',
+    path: '/assets',
     score: function() {
       return $(this).attr('data-score');
     }
