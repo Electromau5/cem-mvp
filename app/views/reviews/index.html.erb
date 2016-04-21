@@ -1,5 +1,5 @@
 <div class="container-fluid">
-    <div id="grid" class="transitions-enabled">
+    <div id="grid" class="transitions-enabled;margin-left:5%">
       <% @review.each do |review| %>
         <div class="box" style="background-color:#d6d6d6; border-radius: 0">
           <%= link_to (image_tag review.image.url(:large)), review %>
