@@ -1,0 +1,63 @@
+<div class = "container">
+	<div class = "jumbotron">
+		<div class = "row">
+			<div class = "col-md-6">
+					<%= image_tag @product.image2.url(:medium), :data => { zoom_image: @product.image2.url(:large) }, :class => "zoom" %>
+						<div class ="row">
+							<div class = "col-md-10 col-xs-6">
+								<div id="gallery">
+								 
+								 <%= link_to image_tag(@product.image2.url(:thumb)), '#', data: { image: @product.image2.url(:medium), zoom_image: @product.image2.url(:large) }, :class => 'zoom2' if @product.image2? %>
+								 
+								 <%= link_to image_tag(@product.image3.url(:thumb)), '#', data: { image: @product.image3.url(:medium), zoom_image: @product.image3.url(:large) }, :class => 'zoom2' if @product.image3?  %>
+								 
+								 <%= link_to image_tag(@product.image4.url(:thumb)), '#', data: { image: @product.image4.url(:medium), zoom_image: @product.image4.url(:large) }, :class => 'zoom2' if @product.image4?  %>
+								 
+								 <%= link_to image_tag(@product.image5.url(:thumb)), '#', data: { image: @product.image5.url(:medium), zoom_image: @product.image5.url(:large) }, :class => 'zoom2' if @product.image5?  %>
+
+								</div>
+							</div>
+								
+						</div>
+				</div>			
+							
+					<div class = "col-md-6">
+						<div class = "product_set_1">
+							<div class="title" style="font-weight:bold;font-size:20px">
+								Product Name: <br/>
+							</div>
+								<div clas="fill" style="font-size:18px">
+									<%= @product.name %><br />
+								</div>
+						</div>
+								<div class="title" style="font-weight:bold;font-size:20px">
+									Features: <br/>
+								</div>
+									<%= @product.feature1 %><br /><br />
+									<%= @product.feature2 %><br /><br />
+									<%= @product.feature3 %><br /><br />
+										<span style="font-size:25px;border:1px solid #008ac1;padding:6px">
+											₹ <%= @product.price %>
+										</span><br /><br />
+										<span style="font-size:25px;border:1px solid #008ac1;padding:6px;margin-right:10px">
+											 <%= link_to 'Add to Cart', '#' %>
+										</span>
+										<span style="font-size:25px;border:1px solid #008ac1;padding:6px">
+											<%= link_to 'Buy Now', '#' %>
+										</span><br /><br />
+									This item can be bought <%= link_to 'here', "#{@product.site}" %><br /><br />
+					   </div>
+					   	
+							<div class = "col-md-4">
+								<% if logged_in? && current_seller.admin? %>
+								<%= link_to 'Edit', edit_product_path(@product), class: "btn btn-default" %>
+								<%= link_to 'Delete', product_path(@product), method: :delete, data: { confirm: "Are you sure you want to delete this product"}, class: "btn btn-default" %>
+							
+						<% end %>
+							<%= link_to 'More from this seller', @product_seller, class: "btn btn-success" %>
+						</div>
+				</div>
+			</div>
+		</div>
+
+		

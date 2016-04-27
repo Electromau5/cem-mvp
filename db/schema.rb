@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160331152709) do
+ActiveRecord::Schema.define(version: 20160427225352) do
 
   create_table "applicants", force: :cascade do |t|
     t.string   "brand"
@@ -59,6 +59,38 @@ ActiveRecord::Schema.define(version: 20160331152709) do
     t.integer "listing_id"
     t.integer "review_id"
   end
+
+  create_table "products", force: :cascade do |t|
+    t.string   "name"
+    t.decimal  "price"
+    t.text     "feature1"
+    t.text     "feature2"
+    t.text     "feature3"
+    t.string   "site"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.string   "image2_file_name"
+    t.string   "image2_content_type"
+    t.integer  "image2_file_size"
+    t.datetime "image2_updated_at"
+    t.string   "image3_file_name"
+    t.string   "image3_content_type"
+    t.integer  "image3_file_size"
+    t.datetime "image3_updated_at"
+    t.string   "image4_file_name"
+    t.string   "image4_content_type"
+    t.integer  "image4_file_size"
+    t.datetime "image4_updated_at"
+    t.string   "image5_file_name"
+    t.string   "image5_content_type"
+    t.integer  "image5_file_size"
+    t.datetime "image5_updated_at"
+    t.integer  "review_id"
+  end
+
+  add_index "products", ["review_id"], name: "index_products_on_review_id"
 
   create_table "reviews", force: :cascade do |t|
     t.string   "title"

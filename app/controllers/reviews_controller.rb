@@ -24,6 +24,7 @@ class ReviewsController < ApplicationController
   def show
   	@review  = Review.find(params[:id])
     @review_listings = @review.listings
+    @review_products = @review.products
   end 
 
   def edit

@@ -1,9 +1,13 @@
+.back
+{
+	margin-left: 1%;
+}
 .review_title
 {
-	font-family: "Raleway-Light", sans-serif;
+	font-family: "SubtleSansLight", sans-serif;
 	font-size: 30px;
 	margin-top: 5%;
-	color: #777777;
+	color: #777;
 }
 
 #grid
@@ -43,4 +47,30 @@
 {
 	border: 0;
 }
+.col-md-3 > h2, .col-md-4 > h4, .col-md-4 > h2
+{
+	font-family: "Raleway-SemiBold", sans-serif;
+}
+
+.col-md-3 > h4
+{
+	font-family: "Raleway-Light", sans-serif;
+}
+
+.col-md-4 > p
+{
+	font-family: "Raleway-Light", sans-serif;
+	font-size: 16px;
+}
+
+.col-md-12 > p {
+	font-family: "Raleway-Regular", sans-serif;
+}
+
+.col-md-12 > h3 {
+	color: #777777;
+}
+
+
+
 

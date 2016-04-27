@@ -1,55 +1,59 @@
-<%= link_to 'Back', reviews_path, class: "btn btn-default" %>
-  <% if logged_in? && current_seller.admin? %>
-    <%= link_to 'Edit', edit_review_path, class: "btn btn-default" %>
-    <%= link_to 'Delete', review_path, method: :delete, class: "btn btn-default" %>
-  <% end %>
-<div class = "container-fluid">
-	<div class = "row">
-		<div class="col-xs-12 col-md-5">
-			<%= image_tag @review.image.url(:large), class: "review-image" %>
-  				<div class = "review_title">
-			  	  <p><%= @review.title %></p>
-		      </div>
-      </div>
-      <div class="col-xs-12 col-md-4">
-        <h2>Ratings</h2>
-        <h4><%= @review.ft1 %> :</h4>
-        <div class="feature1"  data-score= <%= @review.rating1 %> ></div>
-        <h4><%= @review.ft2 %> :</h4>
-        <div class="feature2"  data-score= <%= @review.rating2 %> ></div>
-        <h4><%= @review.ft3 %> :</h4>
-        <div class="feature3"  data-score= <%= @review.rating3 %> ></div>
-        <h4><%= @review.ft4 %> :</h4>
-        <div class="feature4"  data-score= <%= @review.rating4 %> ></div>
-        <h4><%= @review.ft5 %> :</h4>
-        <div class="feature5"  data-score= <%= @review.rating5 %> ></div>
-         </div>
-       <div class="col-xs-12 col-md-3">
-          <h2 style="color:#545454"><%= @review.spec %></h2>
-            <h4><%= @review.st1 %></h4>
-              <p><%= @review.s1 %></p>
-            <h4><%= @review.st2 %></h4>
-              <p><%= @review.s2 %></p>
-            <h4><%= @review.st3 %></h4>
-              <p><%= @review.s3 %></p>
-            <h4><%= @review.st4 %></h4>
-              <p><%= @review.s4 %></p>
-            <h4><%= @review.st5 %></h4>
-              <p><%= @review.s5 %></p>
-      </div>
-            <div class="col-xs-12 col-md-12">
-		        	<h2> Review </h2>
-		            <h3><%= @review.ft1 %>:</h3>
-  			           <p><%= @review.f1 %></p>
-    			      <h3><%= @review.ft2 %>:</h3>
-    			         <p><%= @review.f2 %></p>
-    			      <h3><%= @review.ft3 %>:</h3>
-    			         <p><%= @review.f3 %></p>
-    			      <h3><%= @review.ft4 %>:</h3>
-    			         <p><%= @review.f4 %></p>
-    			     	<h3><%= @review.ft5 %>:</h3>
-    			         <p><%= @review.f5 %></p>
-  			   </div>
-	</div>
-</div>
-<%= render 'listings/listing', obj: @review_listings %>
+  <div class="back">
+    <%= link_to 'Back', reviews_path, class: "btn btn-info" %>
+  </div><br />
+    <% if logged_in? && current_seller.admin? %>
+      <%= link_to 'Edit', edit_review_path, class: "btn btn-default" %>
+        <%= link_to 'Delete', review_path, method: :delete, class: "btn btn-default" %>
+      <% end %>
+        <div class = "container-fluid">
+  	       <div class = "row">
+  		        <div class="col-xs-12 col-md-5">
+  			         <%= image_tag @review.image.url(:large), class: "review-image" %>
+    				        <div class = "review_title">
+  			  	          <p><%= @review.title %></p>
+  		              </div>
+              </div>
+                  <div class="col-xs-12 col-md-3">
+                      <h2>Ratings</h2>
+                          <h4><%= @review.ft1 %> :</h4>
+                              <div class="feature1"  data-score= <%= @review.rating1 %> ></div>
+                                  <h4><%= @review.ft2 %> :</h4>
+                                      <div class="feature2"  data-score= <%= @review.rating2 %> ></div>
+                                          <h4><%= @review.ft3 %> :</h4>
+                                              <div class="feature3"  data-score= <%= @review.rating3 %> ></div>
+                                                   <h4><%= @review.ft4 %> :</h4>
+                                                        <div class="feature4"  data-score= <%= @review.rating4 %> ></div>
+                                                            <h4><%= @review.ft5 %> :</h4>
+                                                                <div class="feature5"  data-score= <%= @review.rating5 %> ></div>
+                  </div>
+                      <div class="col-xs-12 col-md-4">
+                          <h2 style="color:#545454"><%= @review.spec %></h2>
+                              <h4><%= @review.st1 %></h4>
+                                  <p><%= @review.s1 %></p>
+                                      <h4><%= @review.st2 %></h4>
+                                          <p><%= @review.s2 %></p>
+                                              <h4><%= @review.st3 %></h4>
+                                                <p><%= @review.s3 %></p>
+                                                    <h4><%= @review.st4 %></h4>
+                                                        <p><%= @review.s4 %></p>
+                                                            <h4><%= @review.st5 %></h4>
+                                                                <p><%= @review.s5 %></p>
+                      </div>
+                          <div class="col-xs-12 col-md-12">
+  		        	               <h2> Review </h2>
+  		                              <h3><%= @review.ft1 %>:</h3>
+    			                               <p><%= @review.f1 %></p>
+      			                                 <h3><%= @review.ft2 %>:</h3>
+      			                                     <p><%= @review.f2 %></p>
+      			                                         <h3><%= @review.ft3 %>:</h3>
+      			                                             <p><%= @review.f3 %></p>
+      			                                                 <h3><%= @review.ft4 %>:</h3>
+      			                                                     <p><%= @review.f4 %></p>
+      			     	                                                   <h3><%= @review.ft5 %>:</h3>
+      			                                                             <p><%= @review.f5 %></p>
+    			               </div>
+  	         </div>
+        </div><br />
+        <%= render 'products/product', obj: @review_products %>
+        <%= render 'listings/listing', obj: @review_listings %>
+              <%= render 'layouts/footer' %>

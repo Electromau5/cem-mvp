@@ -6,6 +6,8 @@ Rails.application.routes.draw do
     
     resources :applicants
 
+    resources :products
+
     get 'generateanewseller', to: 'sellers#new'
     resources :sellers, except: [:new] 
 
