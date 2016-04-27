@@ -8,7 +8,7 @@
         <span class="icon-bar"></span>
       </button>
       <div class ="navbar-brand">
-        <%= link_to ' Vulpac',root_path %>
+        <%= link_to 'Vulfpack',root_path %>
       </div>
     </div>
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -18,7 +18,25 @@
           <li><%= link_to 'Applicants', applicants_path %>
           <li><%= link_to 'Sellers', sellers_path %>
           <% end %>
-          <li><a href="#">How it Works<span class="sr-only">(current)</span></a></li>
+          <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Explore<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Fashion and Trends</a></li>
+            <li><a href="#">Health and Fitness</a></li>
+            <li><a href="#">Gaming</a></li>
+            <li><a href="#">Tech Innovations</a></li>
+            <li><a href="#">Startups</a></li>
+            <li><a href="#">Nerd Universe</a></li>
+          </ul>
+        </li>
+        <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search for content, products or sellers">
+        </div>
+        <button type="button" class="btn btn-default" aria-label="Left Align">
+            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+        </button>
+      </form>
         </ul>
           <ul class="nav navbar-nav navbar-right">
             <% if logged_in? && current_seller %>
@@ -26,8 +44,7 @@
                 <li><%= link_to 'Account Settings', edit_seller_path(current_seller) %></li>
                 <li><%= link_to 'Log out', logout_path, method: :delete %></li>
             <% else %>
-                <li><%= link_to 'Seller login', login_path %></li>
-                <li><%= link_to 'User login', '#' %></li>
+                <li><%= link_to 'Login', '#' %></li>
             <% end %>
           </ul>
           </ul>

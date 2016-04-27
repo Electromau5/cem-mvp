@@ -4,7 +4,8 @@
 .navbar-default .navbar-nav li > a 
 {
 	color: #fff;
-	font-family: "SubtleSansLight", sans-serif;
+	font-family: "Raleway-ExtraLight", sans-serif;
+	font-weight: thin;
 	font-size: 17px;
 }
 
@@ -19,4 +20,67 @@
 	background-color: #fff;
 	font-family: "SubtleSansRegular", sans-serif;
 	color: #000;
+}
+
+.navbar-nav > li > .dropdown-menu 
+{
+	background-color: #000;
+}
+
+.dropdown-menu > li > a:hover
+{
+	background-color: #000;
+} 
+
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+    background-color: #000;
+    color: #fff;
+}
+
+.navbar-form .form-control {
+    
+    width: 300px;
+}
+
+.btn-default
+{
+	width: 11%;
+}
+.btn-default:hover
+{
+	background-color: #fff;
+}
+.btn-default:active
+{
+	background-color: #fff;
+}
+
+.navbar-brand
+{
+	font-family: "Raleway-Bold", sans-serif;
+	font-size: 20px;
+}
+
+.footer
+{
+	background-color: #000;
+}
+
+.company-details > .col-md-3 > h4
+{
+	color: #fff;
+	font-family: "Raleway-Bold", sans-serif;
+	font-size: 17px;
+}
+.company-details > .col-md-3 > p
+{
+	color: #fff;
+	font-family: "Raleway-ExtraLight", sans-serif;
+	font-size: 13px;
+}
+.company-details > .col-md-3 > p > a
+{
+	color: #fff;
+	font-family: "Raleway-ExtraLight", sans-serif;
+	font-size: 13px;
 }

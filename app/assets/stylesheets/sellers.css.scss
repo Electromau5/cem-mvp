@@ -43,3 +43,83 @@ a:hover
 	font-family: "SubtleSansLight", sans-serif;
 	font-size: 20px;
 }
+
+.modal-login //user login
+{
+	float: right;
+	font-family: "Raleway-Bold", sans-serif;
+	color: #000;
+}
+
+.modal-title
+{
+	font-family: "Raleway-Bold", sans-serif;
+	font-size: 30px;
+}
+.modal-description
+{
+	font-family: "Raleway-Regular", sans-serif;
+	font-size: 16px;
+}
+.facebook {
+    padding: 9px;
+    background-color: #3A5795;
+    width: 30%;
+    text-align: center;
+    margin-left: 35%;
+    border-radius: 5px;
+}
+.facebook-login {
+	
+	color: #fff;
+	font-family: "Helvetica Neue", Helvetica;
+}
+.facebook-login:hover
+{
+	text-decoration: none;
+	color: #fff;
+}
+.login-form
+{
+	margin-left: 35.5%;
+	padding: 1px;
+	display: inline-block;
+	text-align:center;
+}
+.email
+{
+	padding: 7px;
+	margin-top: 5px;
+}
+.password
+{
+	padding: 7px;
+	margin-top: 5px;
+}
+.sign-up-modal
+{
+	float: left;
+	background-color: #000;
+	color: #fff;
+	padding: 8px;
+	border-radius: 3px;
+}
+.sign-up-modal:hover
+{
+	text-decoration: none;
+	color: #fff;
+}
+.skip-modal
+{
+	float: right;
+	padding: 8px;
+	color: #000;
+}
+.skip-modal:hover
+{
+	cursor: pointer;
+}
+.modal-dialog
+{
+	margin-top: 11%;
+}
