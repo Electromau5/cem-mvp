@@ -1,7 +1,7 @@
 <div class="container-fluid">
-	<div class="jumbotron" style="border:2px solid #bfe6ff">
+	<div class="jumbotron" style="border:2px solid black;border-radius: 0">
 		<div class="row">
-			<div class="col-md-6">
+			<div class="col-md-3">
 			<% if @seller.image %>
 				<%= image_tag @seller.image.url(:medium) , class: "img-circle" %>
 			<% end %>
@@ -11,12 +11,22 @@
 						<h1><%= @seller.brand %></h1>
 					</div>
 						<div class="seller-description">
-							<p style="font-size:18px"><%= @seller.description %></p>
+							<p><%= @seller.description %></p>
 						</div>
 							<div class="seller-location">
 								<p><%= @seller.location %></p>
 							</div>
 				</div>
+
+							<div class="col-md-1" style="float:right">
+									<%= link_to 'Follow', '#', class: "btn btn-primary btn-lg" %>
+								</div>
+							</div><br />
+							<div class="icons">
+								<%= link_to image_tag('facebook.png'), '#' %>
+								<%= link_to image_tag('twitter.png'), '#' %>
+								<%= link_to image_tag('instagram.png'), '#' %>
+						</div>
 			</div>
 		</div>
 	</div>

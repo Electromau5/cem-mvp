@@ -2,7 +2,10 @@ class Listing < ActiveRecord::Base
   belongs_to :seller
   validates :seller_id, presence: true
 	validates :name,presence: :true
-	validates :feature1,:feature2,:feature3, presence: :true, length: { minimum: 10, maximum: 500 }
+	validates :feature1,:feature2,:feature3, presence: :true, length: { minimum: 10, maximum: 200 }
+  validates :cod, presence: :true
+  validates :time, presence: :true
+  validates :description, presence: :true
   validates :price, presence: :true 
 	has_attached_file :image, styles: { medium: ["300x300>", :jpg, :quality => 70], thumb: 
   	                ["100x100>", :jpg, :quality => 70],  large:  

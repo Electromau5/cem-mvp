@@ -33,6 +33,7 @@ class ProductsController < ApplicationController
     end
 
     def show
+      @product_review = @product.review
     end
 
     def destroy

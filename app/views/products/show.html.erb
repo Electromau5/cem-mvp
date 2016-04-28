@@ -15,7 +15,8 @@
 								 
 								 <%= link_to image_tag(@product.image5.url(:thumb)), '#', data: { image: @product.image5.url(:medium), zoom_image: @product.image5.url(:large) }, :class => 'zoom2' if @product.image5?  %>
 
-								</div>
+								</div><br />
+								<%= link_to 'Read Review',@product.review , class: "btn btn-danger btn-lg" %>
 							</div>
 								
 						</div>

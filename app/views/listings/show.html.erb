@@ -26,19 +26,26 @@
 							<div class="title" style="font-weight:bold;font-size:20px">
 								Product Name: <br/>
 							</div>
-								<div clas="fill" style="font-size:18px">
-									<%= @listing.name %><br /><br />
+								<div class="fill">
+									<%= @listing.name %>
 								</div>
+									<div class="by">by</div>
+										
 						</div>
+						<%= link_to @listing.seller.brand, @listing.seller %><br /><br />
 								<div class="title" style="font-weight:bold;font-size:20px">
-									Features: <br/>
+									Key Features: <br/>
 								</div>
-									<%= @listing.feature1 %><br /><br />
-									<%= @listing.feature2 %><br /><br />
-									<%= @listing.feature3 %><br /><br />
+									<%= @listing.feature1 %><br />
+									<%= @listing.feature2 %><br />
+									<%= @listing.feature3 %><br />
+									<%= @listing.feature4 %><br />
+									<%= @listing.feature5 %><br /><br />
 										<span style="font-size:25px;border:1px solid #008ac1;padding:6px">
 											₹ <%= @listing.price %>
 										</span><br /><br />
+										<div class= "cod"><%= @listing.cod %></div><br />
+										<div class="time">Delivery Time: <%= @listing.time %></div><br />
 										<span style="font-size:25px;border:1px solid #008ac1;padding:6px;margin-right:10px">
 											 <%= link_to 'Add to Cart', '#' %>
 										</span>
@@ -50,14 +57,39 @@
 					   	
 							<div class = "col-md-4">
 								<% if (logged_in? && current_seller == @listing.seller) %>
-								<%= link_to 'Edit', edit_listing_path(@listing), class: "btn btn-default" %>
-								<%= link_to 'Delete', listing_path(@listing), method: :delete, data: { confirm: "Are you sure you want to delete this listing"}, class: "btn btn-default" %>
+								<%= link_to 'Edit', edit_listing_path(@listing), class: "btn btn-success" %>
+								<%= link_to 'Delete', listing_path(@listing), method: :delete, data: { confirm: "Are you sure you want to delete this listing"},class: "btn btn-success" %> 
 							
 						<% end %>
-							<%= link_to 'More from this seller', @listing_seller, class: "btn btn-success" %>
+							<%= link_to 'More from this seller', @listing_seller, class: "btn btn-danger" %>
 						</div>
-				</div>
+						<div class= "col-md-12 col-xs-12">
+							<h4>Product Description:</h4>
+								<%= @listing.description %>
+						</div>
+						<div class= "col-md-12 col-xs-12">
+							<h4>Technical Info:</h4>
+								<%= @listing.technical %>
+						</div>
+						
+				</div><br />
+						<% if logged_in? %>
+			<%= link_to 'Ask a Question about this product / seller', '#' %>
+		<% else %>
+			You must be logged in to ask a question about this product / seller
+		<% end %>
+			<h5>Question 1 asked by user</h5>
+			<h6>Answer 1 by seller</h6>
+			<h5>Question 2 asked by user</h5>
+			<h6>Answer 2 by seller</h6>
+			<h5>Question 3 asked by user</h5>
+			<h6>Answer 3 by seller</h6>
+			<h5>Question 4 asked by user</h5>
+			<h6>Answer 4 by seller</h6>
 			</div>
 		</div>
+
+		<%= render 'layouts/footer' %>
+
 
 		
