@@ -48,7 +48,7 @@ private
 
 	
 	def seller_params
-		params.require(:seller).permit(:brand, :email, :password, :location, :description, :admin, :image, :image2)
+		params.require(:seller).permit(:brand, :email, :password, :location, :category, :description, :admin, :image, :image2)
 	end
 
 	def set_seller

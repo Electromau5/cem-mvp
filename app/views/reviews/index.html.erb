@@ -1,28 +1,30 @@
-<div class="modal fade" tabindex="-1" role="dialog" id="myModal">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-      	<p><%= link_to 'Login', '#', class: "modal-login" %></p><br /><br />
-        <h4 class="modal-title"style="text-align:center">Welcome to Vulfpack</h4>
-        <h5 class ="modal-description"style="text-align:center">Our objective is to help you discover great content and in turn connect with amazing brands and products.</p>
-      </div>
-      <div class="modal-body">
-      	<div class="facebook">
-      		<%= link_to 'Login with Facebook', '#', class: "facebook-login" %>
-      	</div>
-      	<div class="or" style="font-family: 'Raleway-Regular', sans-serif; text-align:center">or</div>
-        	<form class="login-form">
-  				<input type="text" name="firstname" placeholder="Email" class="email"><br />
-  				<input type="text" name="lastname" placeholder="Password" class="password">
-			</form>
-      </div>
-      <div class="modal-footer">
-        <%= link_to 'Sign Up', '#', class: "sign-up-modal" %>
-       <div class="skip-modal" data-dismiss="modal">Skip</div>
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
+<% if !logged_in? %>
+    <div class="modal fade" tabindex="-1" role="dialog" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+      	           <p><%= link_to 'Login', '#', class: "modal-login" %></p><br /><br />
+                      <h4 class="modal-title"style="text-align:center">Welcome to Vulfpack</h4>
+                          <h5 class ="modal-description"style="text-align:center">Our objective is to help you discover great content and in turn connect with amazing brands and products.</p>
+                </div>
+                    <div class="modal-body">
+      	               <div class="facebook">
+      		                <%= link_to 'Login with Facebook', '#', class: "facebook-login" %>
+      	               </div>
+      	                   <div class="or" style="font-family: 'Raleway-Regular', sans-serif; text-align:center">or</div>
+        	                     <form class="login-form">
+  				                        <input type="text" name="firstname" placeholder="Email" class="email"><br />
+  				                        <input type="text" name="lastname" placeholder="Password" class="password">
+			                         </form>
+                    </div>
+                        <div class="modal-footer">
+                            <%= link_to 'Sign Up', '#', class: "sign-up-modal" %>
+                          <div class="skip-modal" data-dismiss="modal">Skip</div>
+                        </div>
+                  </div>
+                  </div>
+                  </div>
+<% end %>
 <div class="container-fluid">
     <div id="grid" class="transitions-enabled;margin-right:50%">
       <% @review.each do |review| %>

@@ -3,7 +3,7 @@
 		<div class="row">
 			<div class="col-md-3">
 			<% if @seller.image %>
-				<%= image_tag @seller.image.url(:medium) , class: "img-circle" %>
+				<%= image_tag @seller.image.url(:medium) %>
 			<% end %>
 			</div>
 				<div class="col-md-6">
@@ -15,6 +15,9 @@
 						</div>
 							<div class="seller-location">
 								<p><%= @seller.location %></p>
+							</div>
+							<div class="seller-category">
+								<p><%= @seller.category %></p>
 							</div>
 				</div>
 
@@ -30,8 +33,10 @@
 			</div>
 		</div>
 	</div>
+			<%= render 'layouts/all' %>
 			<%= render 'listings/listing', obj: @seller_listings %>
  				<% if logged_in? && current_seller == @seller %>
 					<%= link_to 'Add a new product', new_listing_path, class: "btn btn-default" %>
 				<% end %>
+	<%= render 'layouts/footer' %>
 

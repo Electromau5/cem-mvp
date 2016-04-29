@@ -2,7 +2,14 @@
 {
 	margin-top: 5%;
 }
-
+.login-brand
+{
+	font-family: "Raleway-Light", sans-serif;
+}
+.login-password
+{
+	font-family: "Raleway-Light", sans-serif;
+}
 .seller-brand
 {
 	color:#000;
@@ -25,6 +32,16 @@
 	color:#000;
 	font-family: "Raleway-Bold", sans-serif;
 }
+.seller-category
+{
+	font-family: "Raleway-Light", sans-serif;
+	color: #000;
+}
+.seller-category > p
+{
+	font-size: 15px;
+}
+
 .col-md-2 > .btn-lg
 {
 	border-radius: 5px;
@@ -50,8 +67,8 @@ a:hover
 
 .login-details
 {
-	font-family: "SubtleSansLight", sans-serif;
-	font-size: 20px;
+	font-family:'Raleway-ExtraLight', sans-serif;
+	font-size: 15px;
 }
 
 .modal-login //user login
