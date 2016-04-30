@@ -23,4 +23,5 @@ class Product < ActiveRecord::Base
   validates_attachment_content_type :image4, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
   validates_attachment_content_type :image5, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
   belongs_to :review
+  belongs_to :seller
 end

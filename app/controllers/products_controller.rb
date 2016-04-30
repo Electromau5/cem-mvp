@@ -33,6 +33,7 @@ class ProductsController < ApplicationController
     end
 
     def show
+      @product_seller = @product.seller
       @product_review = @product.review
     end
 
@@ -43,8 +44,8 @@ class ProductsController < ApplicationController
 
     private
     def product_params
-       params.require(:product).permit(:name,:seller, :feature1, :feature2, :feature3, :price, :image, 
-                                        :image2, :image3, :image4, :image5, :site)
+       params.require(:product).permit(:name,:seller, :feature1, :feature2, :feature3, :feature4, :feature5, :price, :cod, :time, :image, 
+                                        :image2, :image3, :image4, :image5, :site, :description, :technical)
     end
 
     def set_product

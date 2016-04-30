@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160428232034) do
+ActiveRecord::Schema.define(version: 20160430220026) do
 
   create_table "applicants", force: :cascade do |t|
     t.string   "brand"
@@ -94,6 +94,13 @@ ActiveRecord::Schema.define(version: 20160428232034) do
     t.integer  "image5_file_size"
     t.datetime "image5_updated_at"
     t.integer  "review_id"
+    t.integer  "seller_id"
+    t.text     "feature4"
+    t.text     "feature5"
+    t.string   "cod"
+    t.string   "time"
+    t.text     "description"
+    t.text     "technical"
   end
 
   add_index "products", ["review_id"], name: "index_products_on_review_id"

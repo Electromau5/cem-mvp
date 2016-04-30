@@ -14,13 +14,21 @@
 						<%= l.label :name %><br />
 						<%= l.text_field :name, class: "form-control" %><br />
 						<%= l.label :feature1 %><br />
-						<%= l.text_area :feature1, class: "form-control" %>
+						<%= l.text_field :feature1, class: "form-control" %>
 						<%= l.label :feature2 %><br />
-						<%= l.text_area :feature2, class: "form-control" %>
+						<%= l.text_field :feature2, class: "form-control" %>
 						<%= l.label :feature3 %><br />
-						<%= l.text_area :feature3, class: "form-control" %>
+						<%= l.text_field :feature3, class: "form-control" %>
+						<%= l.label :feature4 %><br />
+						<%= l.text_field :feature4, class: "form-control" %>
+						<%= l.label :feature5 %><br />
+						<%= l.text_field :feature5, class: "form-control" %>
 						<%= l.label :price %><br />
 						<%= l.text_field :price, class: "form-control" %>
+						<%= l.label :cod %><br />
+						<%= l.text_field :cod, class: "form-control" %>
+						<%= l.label :time, 'Delivery Time' %><br />
+						<%= l.text_field :time, class: "form-control" %>
 						<%= l.label :image %>
 						<%= l.file_field :image, class: "form-control"%><br />
 						<%= l.label :image2, 'image2 - Upload the same image if you do not have more than one)' %>
@@ -33,6 +41,10 @@
 						<%= l.file_field :image5, class: "form-control"%>
 						<%= l.label :site, 'Purchase Link ( it is recommended to use a url shortner )' %><br />
 						<%= l.text_field :site, class: "form-control" %><br />
+						<%= l.label :description, 'Detailed Description' %><br />
+						<%= l.text_area :description, class: "form-control" %>
+						<%= l.label :technical, 'Al technical Details' %><br />
+						<%= l.text_area :technical, class: "form-control" %>
 						<%= l.submit 'List product', class: 'btn btn-primary btn-lg'  %>
 					<% end %>
 				</div>
