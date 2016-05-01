@@ -33,6 +33,9 @@
 			</div>
 		</div>
 	</div>
+		
+          <%= render 'layouts/reviewp' %>
+          <%= render 'products/product', obj: @seller_products %>
 			<%= render 'layouts/all' %>
 			<%= render 'listings/listing', obj: @seller_listings %>
  				<% if logged_in? && current_seller == @seller %>

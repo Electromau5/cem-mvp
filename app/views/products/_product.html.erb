@@ -1,3 +1,16 @@
-<% obj.each do |product| %>
-	<%= link_to 'Buy this Product',product , class: "btn btn-danger btn-lg" %><br /><br />
-<% end %>
+ <div class = "container">
+    <div class = "row">
+			<% obj.each do |product| %>
+		  		<div class = "col-xs-6 col-md-3">
+		    		<div class = "thumbnail" style="border-radius:0;border:1px solid #000">
+             			<%= link_to image_tag(product.image.url(:medium)), product %>
+             				<div class="caption">
+			 					<div class = "listing_name">
+			   						<%= truncate(product.name, length: 25) %>
+			 					</div>
+			 				</div>
+		     		</div>
+          		</div>
+			<% end %>
+	</div>
+  </div>
